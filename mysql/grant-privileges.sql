@@ -1,5 +1,5 @@
 -- ===================================================================
--- FinTrack – Table-Level Least Privilege Security Configuration
+-- OWASP Secure Web App – Table-Level Least Privilege Configuration
 -- ===================================================================
 -- Ogranicza uprawnienia użytkownika runtime aplikacji ('fintrack_user')
 -- wyłącznie do operacji DML (SELECT, INSERT, UPDATE, DELETE) na ściśle

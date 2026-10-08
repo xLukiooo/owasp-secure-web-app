@@ -52,7 +52,7 @@ flowchart TD
   * Wizualizacja podsumowań wydatków, animacje i komponenty Material UI.
   * Komponent `ErrorBoundary` chroniący przed awarią aplikacji w przypadku błędów renderowania.
 
-* **Backend (`Django 5.1 / Django REST Framework`)**:
+* **Backend (`Django 5.x / Django REST Framework`)**:
   * Autoryzacja hybrydowa: ciasteczka `HttpOnly` chronione przed XSS + obsługa standardowego nagłówka `Authorization: Bearer <token>` dla integracji zewnętrznych/API.
   * Ochrona przed CSRF na kluczowych endpointach mutujących stan.
   * Zaawansowany throttling (`ScopedRateThrottle`) zabezpieczający przed atakami brute-force.
@@ -118,7 +118,7 @@ flowchart TD
 │   ├── manage.py             # Narzędzie CLI Django
 │   ├── requirements.txt      # Zależności biblioteczne Pythona
 │   ├── myproject/            # Główna konfiguracja projektu (settings, urls, wsgi, asgi)
-│   └── api_app/              # Logika biznesowa API FinTrack
+│   └── api_app/              # Logika biznesowa API (wydatki, kategorie, autoryzacja)
 │       ├── fixtures/         # initial_data.json (dane początkowe kategorii i użytkowników)
 │       ├── migrations/       # Pliki migracji bazodanowych
 │       ├── views/            # Widoki API (auth, expenses, summary, moderator)
@@ -178,6 +178,7 @@ docker compose up --build
 | :--- | :--- | :--- | :--- |
 | `POST` | `/api/auth/token/` | Logowanie (zwraca tokeny i ustawia ciasteczka) | Publiczny |
 | `POST` | `/api/auth/token/refresh/` | Odświeżenie sesji JWT | Publiczny / Cookie |
+| `GET` | `/api/get-csrf-token/` | Pobranie tokenu ochrony CSRF | Publiczny |
 | `POST` | `/api/register/` | Rejestracja nowego użytkownika | Publiczny |
 | `POST` | `/api/activate/` | Aktywacja konta za pomocą tokenu | Publiczny |
 | `POST` | `/api/logout/` | Wylogowanie i usunięcie ciasteczek | Zalogowany |
