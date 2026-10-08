@@ -1,0 +1,148 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "username": "user1",
+        "password": "pbkdf2_sha256$870000$58avIoePopLyai5QLz5zk0$9Zw0crgF32oGkXdG0on5fGRri+WA4j5J2g6xgbQxT8I=",
+        "email": "user1@example.com",
+        "first_name": "Jan",
+        "last_name": "Kowalski",
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "date_joined": "2025-03-21T00:00:00Z",
+        "groups": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "username": "user2",
+        "password": "pbkdf2_sha256$870000$58avIoePopLyai5QLz5zk0$9Zw0crgF32oGkXdG0on5fGRri+WA4j5J2g6xgbQxT8I=",
+        "email": "user2@example.com",
+        "first_name": "Anna",
+        "last_name": "Nowak",
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "date_joined": "2025-03-21T00:00:00Z",
+        "groups": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "username": "user3",
+        "password": "pbkdf2_sha256$870000$58avIoePopLyai5QLz5zk0$9Zw0crgF32oGkXdG0on5fGRri+WA4j5J2g6xgbQxT8I=",
+        "email": "user3@example.com",
+        "first_name": "Piotr",
+        "last_name": "Zieliński",
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "date_joined": "2025-03-21T00:00:00Z",
+        "groups": [1]
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 1,
+      "fields": {
+        "name": "Moderator",
+        "permissions": []
+      }
+    },
+    {
+      "model": "api_app.category",
+      "pk": 1,
+      "fields": {
+        "name": "Jedzenie"
+      }
+    },
+    {
+      "model": "api_app.category",
+      "pk": 2,
+      "fields": {
+        "name": "Hotel"
+      }
+    },
+    {
+      "model": "api_app.category",
+      "pk": 3,
+      "fields": {
+        "name": "Podróż"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 1,
+      "fields": {
+        "user": 1,
+        "category": 1,
+        "amount": "45.50",
+        "date": "2025-03-20"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 2,
+      "fields": {
+        "user": 1,
+        "category": 2,
+        "amount": "120.00",
+        "date": "2025-03-20"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 3,
+      "fields": {
+        "user": 2,
+        "category": 3,
+        "amount": "75.25",
+        "date": "2025-03-19"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 4,
+      "fields": {
+        "user": 2,
+        "category": 1,
+        "amount": "30.00",
+        "date": "2025-03-18"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 5,
+      "fields": {
+        "user": 3,
+        "category": 2,
+        "amount": "200.00",
+        "date": "2025-03-20"
+      }
+    },
+    {
+      "model": "api_app.expense",
+      "pk": 6,
+      "fields": {
+        "user": 3,
+        "category": 3,
+        "amount": "150.00",
+        "date": "2025-03-19"
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 1,
+      "fields": {
+        "name": "Moderator",
+        "permissions": [15, 16]
+      }
+    }
+  ]
+  
